@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>College Student Schedule</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			text-align: center;
+		}
+		th, td {
+			padding: 10px;
+			border: 1px solid #ddd;
+			font-weight: normal;
+			font-size: 16px;
+		}
+		th {
+			background-color: #007bff;
+			color: #fff;
+		}
+		td {
+			background-color: #f5f5f5;
+		}
+		td.weekend {
+			background-color: #e6e6e6;
+		}
+		td.bold {
+			font-weight: bold;
+		}
+		td.colspan2 {
+			font-weight: bold;
+			background-color: #cce6ff;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Day</th>
+			<th>Time</th>
+			<th>Course</th>
+			<th>Room</th>
+		</tr>
+		<tr>
+			<td class="weekend">Saturday</td>
+			<td>9:00 AM - 11:00 AM</td>
+			<td rowspan="2" class="colspan2">Calculus II</td>
+			<td>Room 101</td>
+		</tr>
+		<tr>
+			<td class="weekend">Sunday</td>
+			<td>9:00 AM - 11:00 AM</td>
+			<td>Room 101</td>
+		</tr>
+		<tr>
+			<td>Monday</td>
+			<td>10:00 AM - 11:30 AM</td>
+			<td class="bold">Chemistry Lab</td>
+			<td>Lab 202</td>
+		</tr>
+		<tr>
+			<td>Tuesday</td>
+			<td>9:00 AM - 11:00 AM</td>
+			<td>English Literature</td>
+			<td>Room 303</td>
+		</tr>
+		<tr>
+			<td>Wednesday</td>
+			<td>1:00 PM - 3:00 PM</td>
+			<td rowspan="2" class="colspan2">Computer Science</td>
+			<td>Room 404</td>
+		</tr>
+		<tr>
+			<td>Thursday</td>
+			<td>1:00 PM - 3:00 PM</td>
+			<td>Room 404</td>
+		</tr>
+		<tr>
+			<td>Friday</td>
+			<td>9:00 AM - 10:30 AM</td>
+			<td>History of Art</td>
+			<td>Room 202</td>
+		</tr>
+	</table>
+</body>
+</html>
