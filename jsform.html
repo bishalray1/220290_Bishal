@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Form</title>
+    <style>
+    /* Apply box-sizing to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Set default font styles */
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Style the container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the form heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Style the form fields */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Style the form labels */
+label {
+    font-weight: bold;
+}
+
+/* Style the form input fields */
+input,
+select,
+textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Style the form submit button */
+button[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style form fields that are required */
+input[required],
+select[required],
+textarea[required] {
+    border-color: red;
+}
+
+/* Style form fields that have invalid input */
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border-color: red;
+}
+
+    </style>
+</head>
+<body>
+	<div class="container">
+		<h2>Admission Form</h2>
+		<form id="admission-form">
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="phone">Phone</label>
+				<input type="tel" id="phone" name="phone" required>
+			</div>
+			<div class="form-group">
+				<label for="gender">Gender</label>
+				<select id="gender" name="gender" required>
+					<option value="" selected disabled>Select your gender</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="dob">Date of Birth</label>
+				<input type="date" id="dob" name="dob" required>
+			</div>
+			<div class="form-group">
+				<label for="address">Address</label>
+				<textarea id="address" name="address" required></textarea>
+			</div>
+			<button type="submit" id="submit-button">Submit</button>
+		</form>
+	</div>
+
+	<script src="script.js"></script>
+    <script>
+        const form = document.getElementById('admission-form');
+
+form.addEventListener('submit', (event) => {
+	event.preventDefault(); // prevent the default form submission
+
+	// get form values
+	const name = document.getElementById('name').value;
+	const email = document.getElementById('email').value;
+	const phone = document.getElementById('phone').value;
+	const gender = document.getElementById('gender').value;
+	const dob = document.getElementById('dob').value;
+	const address = document.getElementById('address').value;
+
+	// log form values to console
+	console.log(`Name: ${name}`);
+	console.log(`Email: ${email}`);
+	console.log(`Phone: ${phone}`);
+	console.log(`Gender: ${gender}`);
+	console.log(`Date of Birth: ${dob}`);
+	console.log(`Address: ${address}`);
+
+	// clear form fields
+	form.reset();
+});
+
+    </script>
+</body>
+</html>
