@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkmode</title>
+    <style>
+        .container {
+            border: 1px solid black;
+        }
+        .dark {
+            background-color: #1a1a1a;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="demo">
+        <h1>This is Heading 1</h1>
+        <p>Hey man!</p>
+    </div>
+    <button onclick="lightmode()">Light mode</button>
+    <button onclick="darkmode()">Dark mode</button>
+    <!-- Javascript code  -->
+    <script>
+        function lightmode() {
+            document.getElementById("demo").classList.remove('dark');
+        }
+        
+        function darkmode() {
+            document.getElementById("demo").classList.add('dark');
+        }
+    </script>
+</body>
+</html>
