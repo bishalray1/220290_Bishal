@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Form</title>
+  <script>
+    function validateForm() {
+      var name = document.forms["myForm"]["name"].value;
+      var email = document.forms["myForm"]["email"].value;
+
+      if (name == "") {
+        alert("Please enter your name.");
+        return false;
+      }
+
+      if (email == "") {
+        alert("Please enter your email.");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Simple Form</h1>
+  <form name="myForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
